@@ -5,6 +5,6 @@ class StoresController < ApplicationController
   end
 
   def show
-    @store = create_store(params["id"])
+    @hours = Store.create_store_hours(params["id"])
   end
 end

@@ -9,12 +9,15 @@ RSpec.feature "User can navigate to store#show from search" do
 
     click_on("Best Buy Mobile - Cherry Creek Shopping Center")
 
-    expect(current_path).to eq("/stores/#{store.id}")
+    expect(current_path).to eq("/stores/2740")
 
-    expect(page).to have_content(store.name)
-    expect(page).to have_content(store.type)
-    expect(page).to have_content(store.address2)
+    expect(page).to have_content("Best Buy Mobile - Cherry Creek Shopping Center")
+    expect(page).to have_content("Mobile")
+    expect(page).to have_content("3000 East First Ave")
+    expect(page).to have_content("Denver")
+    expect(page).to have_content("CO")
 
-    #store hours
+
+    expect(page).to have_content("Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 11-6")
   end
 end
