@@ -10,10 +10,10 @@
 require "rails_helper"
 
 RSpec.feature "User can search for stores by zip" do
-  xscenario "they go to root_path and search with 15 results" do
+  scenario "they go to root_path and search with 15 results" do
     visit root_path
 
-    fill_in "Search", with: "80202"
+    fill_in "search", with: "80202"
     click_on("Find Stores")
 
     expect(current_path).to eq("/search")

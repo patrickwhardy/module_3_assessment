@@ -18,5 +18,6 @@ RSpec.describe BestbuyService do
     expect(store["city"]).to eq("Denver")
     expect(store["distance"]).to eq(3.25)
     expect(store["phone"]).to eq("303-270-9189")
+    expect(store["storeType"]).to eq("Mobile")
   end
 end
