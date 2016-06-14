@@ -12,7 +12,6 @@ class Api::V1::ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     if @item.save
-      render :status => 201
       respond_with Item.find(@item.id)
     end
   end

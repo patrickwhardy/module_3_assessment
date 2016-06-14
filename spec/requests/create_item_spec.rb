@@ -16,8 +16,9 @@ RSpec.describe "POST /api/v1/items" do
     }}
 
     post "/api/v1/items.json", params
-    expect(response.status).to eq 201
 
+    expect(Item.count).to eq(1)
+    item = Item.last
     item_json = JSON.parse(response.body)
 
     expect(item_json["id"]).to eq(item.id)
