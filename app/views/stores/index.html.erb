@@ -1,4 +1,9 @@
-<%= "#{@total} Total Stores "%>
+<%= "#{@total} Total Stores "%><br>
+
 <% @stores.each do |store| %>
-<%=  %>
+  <%=  "Long Name: #{store.longName}" %><br>
+  <%=  "City: #{store.city}" %><br>
+  <%=  "Distance: #{store.distance}" %><br>
+  <%=  "Phone Number: #{store.phone}" %><br>
+  <%=  "Store Type: #{store.storeType}" %><br>
 <% end %>
