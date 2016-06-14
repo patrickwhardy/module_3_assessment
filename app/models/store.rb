@@ -11,7 +11,7 @@ class Store < OpenStruct
   end
 
   def self.create_store(id)
-    service.get_stores(id)
+    service.get_store_hours(id)
   end
 
   def self.total(zip)

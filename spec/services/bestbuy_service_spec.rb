@@ -23,6 +23,7 @@ RSpec.describe BestbuyService do
 
   it "gets store hours by id" do
     service = BestbuyService.new
-    stores_json = service.get_store_hours()
+    store_hours_json = service.get_store_hours(2740)["stores"][0]["hours"]
+    expect(store_hours_json).to eq("Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 11-6")
   end
 end

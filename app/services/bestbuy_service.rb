@@ -8,7 +8,7 @@ class BestbuyService
   end
 
   def get_store_hours(id)
-    JSON.parse(@connection.get("stores(storeId=#{id})?format=json&show=hours&apiKey=#{ENV['best_buy_key']}"))
+    JSON.parse(@connection.get("stores(storeId=#{id})?format=json&show=hours&apiKey=#{ENV['best_buy_key']}").body)
   end
 
 end
