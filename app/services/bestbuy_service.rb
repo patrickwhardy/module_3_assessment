@@ -4,6 +4,6 @@ class BestbuyService
   end
 
   def get_stores(zip)
-    JSON.parse(@connection.get("stores(area(#{zip},25))?format=json&show=longName,city,distance,phone,storeType&pageSize=15&apiKey=#{ENV['best_buy_key']}").body)
+    JSON.parse(@connection.get("stores(area(#{zip},25))?format=json&show=longName,city,distance,phone,store,address2Type&pageSize=15&apiKey=#{ENV['best_buy_key']}").body)
   end
 end
