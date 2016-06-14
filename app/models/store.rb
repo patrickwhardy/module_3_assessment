@@ -10,6 +10,10 @@ class Store < OpenStruct
     stores_json.map { |store_data| Store.new(store_data) }
   end
 
+  def self.create_store(id)
+    service.get_stores(id)
+  end
+
   def self.total(zip)
     service.get_stores(zip)["total"]
   end

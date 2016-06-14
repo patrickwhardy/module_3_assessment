@@ -20,4 +20,9 @@ RSpec.describe BestbuyService do
     expect(store["phone"]).to eq("303-270-9189")
     expect(store["storeType"]).to eq("Mobile")
   end
+
+  it "gets store hours by id" do
+    service = BestbuyService.new
+    stores_json = service.get_store_hours()
+  end
 end

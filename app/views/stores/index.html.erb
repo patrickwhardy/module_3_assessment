@@ -1,7 +1,7 @@
 <%= "#{@total} Total Stores "%><br>
 
 <% @stores.each do |store| %>
-  <%=  "Long Name: #{store.longName}" %><br>
+  Long Name: <%= link_to store.longName, store_path(store.storeId) %><br>
   <%=  "City: #{store.city}" %><br>
   <%=  "Distance: #{store.distance}" %><br>
   <%=  "Phone Number: #{store.phone}" %><br>

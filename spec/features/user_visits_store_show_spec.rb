@@ -7,7 +7,6 @@ RSpec.feature "User can navigate to store#show from search" do
     fill_in "search", with: "80202"
     click_on("Find Stores")
 
-    store = Store.first
     click_on("Best Buy Mobile - Cherry Creek Shopping Center")
 
     expect(current_path).to eq("/stores/#{store.id}")

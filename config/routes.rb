@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get '/search', to: "stores#index"
 
+  resources :stores, only: [:show]
+
   resources :items,  only: [:index, :show]
   resources :orders, only: [:index, :show]
   resources :users,  only: [:index, :show]
