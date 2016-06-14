@@ -131,6 +131,8 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (11.2.2)
     ref (2.0.0)
+    responders (1.1.2)
+      railties (>= 3.2, < 4.2)
     rspec-core (3.4.4)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
@@ -206,6 +208,7 @@ DEPENDENCIES
   minitest-rails-capybara
   pry
   rails (= 4.1.4)
+  responders
   rspec-rails
   sass-rails (~> 4.0.3)
   spring

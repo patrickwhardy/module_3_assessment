@@ -14,6 +14,7 @@ gem "less-rails-bootstrap"
 gem "minitest-rails"
 gem "faraday"
 gem "figaro"
+gem "responders"
 
 group :development do
   gem "spring"
@@ -26,4 +27,5 @@ group :development, :test do
   gem "capybara"
   gem "launchy"
   gem "webmock"
+  gem "faker"
 end
