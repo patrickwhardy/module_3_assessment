@@ -16,7 +16,7 @@ RSpec.feature "User can navigate to store#show from search" do
     expect(page).to have_content("3000 East First Ave")
     expect(page).to have_content("Denver")
     expect(page).to have_content("CO")
-
+    expect(page).to have_content("80206")
 
     expect(page).to have_content("Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 11-6")
   end
