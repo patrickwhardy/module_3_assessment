@@ -21,9 +21,15 @@ RSpec.describe BestbuyService do
     expect(store["storeType"]).to eq("Mobile")
   end
 
-  it "gets store hours by id" do
+  it "gets store with hour" do
     service = BestbuyService.new
-    store_hours_json = service.get_store_hours(2740)["stores"][0]["hours"]
-    expect(store_hours_json).to eq("Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 11-6")
+    store_json = service.get_store_with_hours(2740)["stores"][0]
+    expect(store_json["hours"]).to eq("Mon: 10-9; Tue: 10-9; Wed: 10-9; Thurs: 10-9; Fri: 10-9; Sat: 10-9; Sun: 11-6")
+    expect(store_json["longName"]).to eq("Best Buy Mobile - Cherry Creek Shopping Center")
+    expect(store_json["city"]).to eq("Denver")
+    expect(store_json["storeType"]).to eq("Mobile")
+    expect(store_json["address"]).to eq("3000 East First Ave")
+    expect(store_json["postalCode"]).to eq("80206")
+    expect(store_json["region"]).to eq("CO")
   end
 end
